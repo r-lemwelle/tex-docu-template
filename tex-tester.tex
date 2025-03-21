@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+
+\title{Testing Latex}
+\author{Lemwelle Jose Rosales}
+\date{\today}
+
+%==============================
+% Configurations
+%==============================
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fourier} % GOOD FONTS: mlmodern,fourier,notomath,[adobe-utopia]{mathdesign}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+
+\usepackage{graphicx}
+\graphicspath{{images/}} %path to folder that contains the images
+
+\usepackage[backend=biber, style=ieee]{biblatex}
+\addbibresource{ref.bib} %path to bibliography file
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks = true,
+linkcolor = blue,
+urlcolor = blue,
+citecolor = blue,
+linkbordercolor = {white}
+}
+\urlstyle{same}
+
+
+% Code Style
+%----------------------
+
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+% Custom commands
+%----------------------
+
+% For inserting visuals/images/charts
+\newcommand{\insertpic}[3][0.55]{
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=#1\textwidth]{#2}}
+    \caption{#3}
+\end{figure}
+}
+
+
+\begin{document}
+\maketitle
+
+%\begin{abstract}
+%\end{abstract}
+%\pagebreak
+
+% For code listing
+%\begin{lstlisting}
+%\end{lstlisting}
+
+\section{Introduction}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\cite{test}
+
+\subsection{Another Introduction}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\cite{test}
+
+\section{Background}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\cite{test} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\cite{test} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\cite{test}
+
+\insertpic{sample}{sample image}
+
+\section{Assumptions and Constraints}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\cite{test} 
+
+
+\printbibliography
+
+\end{document}
