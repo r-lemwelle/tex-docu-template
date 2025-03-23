@@ -1,14 +1,15 @@
 \documentclass[12pt]{article}
 
-\title{Testing Latex}
-\author{Lemwelle Jose Rosales}
-\date{\today}
+% \title{Testing Latex}
+% \author{Lemwelle Jose Rosales}
+% \date{\today}
+% \date{}
 
 %==============================
 % Configurations
 %==============================
 
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=1in,includefoot]{geometry}
 \usepackage{fourier} % GOOD FONTS: mlmodern,fourier,notomath,[adobe-utopia]{mathdesign}
 \usepackage[T1]{fontenc}
 \usepackage{float}
@@ -70,14 +71,32 @@ linkbordercolor = {white}
 \newcommand{\insertpic}[3][0.55]{
 \begin{figure}[H]
     \centering
+		\setlength{\fboxsep}{0pt}
+		\setlength{\fboxrule}{1pt}
     \fbox{\includegraphics[width=#1\textwidth]{#2}}
+    % \fbox{\includegraphics[width=#1\textwidth]{#2}}
     \caption{#3}
 \end{figure}
 }
 
+% ==============================
+% | Substitute for Title
+% ==============================
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Multi-category Trends} 		% Project / Product Name
+\rhead{Philip Morris}							% Team Name
 
 \begin{document}
-\maketitle
+% \maketitle
+
+\begin{center}
+	Test Documentation Series
+	\\
+	\LARGE\bfseries Test Document
+	\line(1,0){\textwidth}
+\end{center}
 
 %\begin{abstract}
 %\end{abstract}
