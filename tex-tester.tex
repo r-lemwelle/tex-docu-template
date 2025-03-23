@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 
-% \title{Testing Latex}
-% \author{Lemwelle Jose Rosales}
+% \title{}
+% \author{}
 % \date{\today}
 % \date{}
 
@@ -68,19 +68,19 @@ linkbordercolor = {white}
 %----------------------
 
 % For inserting visuals/images/charts
+% usage: insertpic{imagefile}{image caption}
 \newcommand{\insertpic}[3][0.55]{
 \begin{figure}[H]
     \centering
 		\setlength{\fboxsep}{0pt}
 		\setlength{\fboxrule}{1pt}
     \fbox{\includegraphics[width=#1\textwidth]{#2}}
-    % \fbox{\includegraphics[width=#1\textwidth]{#2}}
     \caption{#3}
 \end{figure}
 }
 
 % ==============================
-% | Substitute for Title
+% | Headers
 % ==============================
 
 \usepackage{fancyhdr}
@@ -90,6 +90,10 @@ linkbordercolor = {white}
 
 \begin{document}
 % \maketitle
+
+% ==============================
+% | Substitute for Title
+% ==============================
 
 \begin{center}
 	Test Documentation Series
